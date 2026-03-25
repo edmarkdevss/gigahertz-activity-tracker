@@ -1,0 +1,67 @@
+/* ══ 1. CORE IMPORTS ══ */
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* ══ 2. GLOBAL RESET & BASE STYLES ══ */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        /* Ensures the background and text colors hold strong globally */
+        @apply bg-background text-foreground;
+        overflow-x: hidden;
+    }
+
+    /* ══ 3. PRETTY SELECTIONS ══ */
+    ::selection {
+        background-color: #1a3af5; /* Gigahertz Blue Highlight */
+        color: #ffffff;
+    }
+
+    ::-moz-selection {
+        background-color: #1a3af5;
+        color: #ffffff;
+    }
+
+    /* ══ 4. CUSTOM SLEEK SCROLLBARS ══ */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #8890aa; /* Muted slate color */
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #4a5270; /* Darker on hover */
+    }
+
+    /* ══ 5. REUSABLE PREMIUM UTILITIES ══ */
+    /* Drop this class on any div to instantly make it look like frosted glass */
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .glass-effect {
+        background: rgba(19, 29, 48, 0.7);
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+}
