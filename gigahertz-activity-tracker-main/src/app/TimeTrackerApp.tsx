@@ -7,7 +7,7 @@ export function TimeTrackerApp() {
   const [screen, setScreen] = useState<"login" | "register" | "app">("login");
   const [user, setUser] = useState<any>(null);
   const [darkMode, setDarkMode] = useState(false);
-
+//uytre
   const handleLogin = (email: string) => {
     setUser({ email, name: email.split("@")[0] });
     setScreen("app");
